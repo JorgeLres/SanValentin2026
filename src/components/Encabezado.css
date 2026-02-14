@@ -1,0 +1,45 @@
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInDown 1.5s ease-out;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e, #ffb4b4, #ff6b6b);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient 4s ease infinite;
+  text-shadow: 0 0 30px rgba(255, 107, 107, 0.5);
+}
+
+.header .subtitle {
+  font-size: 1.2rem;
+  color: #ffb4b4;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+}
