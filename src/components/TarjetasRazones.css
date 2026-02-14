@@ -1,0 +1,100 @@
+.reasons-section {
+  margin-bottom: 40px;
+}
+
+.reasons-section h2 {
+  font-size: 2rem;
+  color: #ff8e8e;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.reasons-hint {
+  text-align: center;
+  color: #888;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.reason-card {
+  perspective: 1000px;
+  height: 180px;
+  cursor: pointer;
+}
+
+.reason-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+}
+
+.reason-card.flipped .reason-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Hover solo en desktop */
+@media (hover: hover) {
+  .reason-card:hover:not(.flipped) .reason-card-inner {
+    transform: rotateY(15deg);
+  }
+}
+
+.reason-front, .reason-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.reason-front {
+  background: linear-gradient(145deg, #ff6b6b, #ff8e8e);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.reason-back {
+  background: linear-gradient(145deg, #2d1515, #3d2020);
+  border: 2px solid #ff6b6b;
+  transform: rotateY(180deg);
+  font-size: 1rem;
+  color: #ffb4b4;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .reasons-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .reasons-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .reason-card {
+    height: 150px;
+  }
+
+  .reason-front {
+    font-size: 2.5rem;
+  }
+
+  .reason-back {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,51 @@
+.message-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  border: 1px solid rgba(255,107,107,0.2);
+}
+
+.message-section h2 {
+  font-size: 2rem;
+  color: #ff8e8e;
+  margin-bottom: 20px;
+}
+
+.typewriter {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  min-height: 150px;
+  text-align: left;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  color: #ff6b6b;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.cursor.visible {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .message-section {
+    padding: 20px 15px;
+  }
+
+  .message-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .typewriter {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    min-height: 200px;
+  }
+}
